@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Installs required
 
 npm install web-vitals
