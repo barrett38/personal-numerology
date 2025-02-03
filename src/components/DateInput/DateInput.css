@@ -1,0 +1,23 @@
+.date-input {
+  /* Flex Settings */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.date-input input {
+  margin: 5px 0;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  /* Flex Settings */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}

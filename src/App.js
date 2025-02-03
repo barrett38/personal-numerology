@@ -1,5 +1,7 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import DateInput from "./components/DateInput/DateInput";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <DateInput />
       </header>
     </div>
   );
