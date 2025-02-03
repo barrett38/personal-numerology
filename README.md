@@ -2,11 +2,9 @@
 
 To ensure all dependencies are installed correctly, please run the following commands:
 
-_React has not been installing WEB VITALS by default recently. Install it using._
-
-_BABEL was required at the start of the project. Install the required Babel plugin._
-
 ```sh
+# Web Vitals are not being installed by default lately
 npm install web-vitals
+# Babel was required for this project
 npm install --save-dev @babel/plugin-proposal-private-property-in-object
 ```
