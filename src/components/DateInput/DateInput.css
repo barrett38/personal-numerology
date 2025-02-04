@@ -2,8 +2,6 @@
   background-image: url("./Background-A.JPG");
   background-size: cover;
   background-position: center;
-  width: 80%; /* Set a specific width */
-  margin: 0 auto; /* Center horizontally */
   padding-bottom: 30px;
   padding-left: 30px;
   /* Flex Settings */
