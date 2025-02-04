@@ -1,4 +1,28 @@
 .date-input {
+  background-image: url("./Background-A.JPG");
+  background-size: cover;
+  background-position: center;
+  width: 80%; /* Set a specific width */
+  margin: 0 auto; /* Center horizontally */
+  padding-bottom: 30px;
+  padding-left: 30px;
+  /* Flex Settings */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+p {
+  margin: 5px 0;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   /* Flex Settings */
   display: flex;
   flex-direction: column;
@@ -9,12 +33,14 @@
 }
 
 .date-input select,
-button {
+.date-input button {
   margin: 5px 0;
   padding: 10px;
   width: 200px;
   text-align: center;
   border-radius: 10px;
+  background-color: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   /* Flex Settings */
   display: flex;
   flex-direction: column;
