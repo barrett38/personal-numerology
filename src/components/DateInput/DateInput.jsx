@@ -4,7 +4,7 @@ import "./DateInput.css";
 function DateInput() {
   return (
     <div className="date-input">
-      <p>Placeholder</p>
+      <p>We are our numbers.</p>
       <select>
         <option value="">Month</option>
         {Array.from({ length: 12 }, (_, i) => (
@@ -24,8 +24,8 @@ function DateInput() {
       <select>
         <option value="">Year</option>
         {Array.from({ length: 2025 - 1900 + 1 }, (_, i) => (
-          <option key={1900 + i} value={1900 + i}>
-            {1900 + i}
+          <option key={2025 - i} value={2025 - i}>
+            {2025 - i}
           </option>
         ))}
       </select>
