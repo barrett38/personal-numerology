@@ -8,7 +8,8 @@
   align-content: stretch;
 }
 
-.date-input select {
+.date-input select,
+button {
   margin: 5px 0;
   padding: 10px;
   width: 200px;
@@ -21,4 +22,10 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
+}
+
+button {
+  background-color: gray;
+  border: none;
+  cursor: pointer;
 }

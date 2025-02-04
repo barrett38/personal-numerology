@@ -29,6 +29,7 @@ function DateInput() {
           </option>
         ))}
       </select>
+      <button>Submit</button>
     </div>
   );
 }
