@@ -3,7 +3,7 @@ import "./DateInput.css";
 
 function DateInput() {
   return (
-    <div className="backgorund-div">
+    <div>
       {/* still working on */}
       <div className="date-input">
         <p>We are our numbers.</p>
