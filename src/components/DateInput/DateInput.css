@@ -1,3 +1,7 @@
+:root {
+  --radius: 10px;
+}
+
 .date-input {
   background-image: url("./Background-A.JPG");
   background-size: cover;
@@ -19,7 +23,6 @@ p {
   padding: 10px;
   width: 200px;
   text-align: center;
-  border-radius: 10px;
   background-color: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -32,13 +35,23 @@ p {
   align-content: stretch;
 }
 
+.date-input select {
+  border-radius: var(--radius);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  border: 1px solid #ccc; /* Ensures visibility of border */
+  padding: 10px;
+}
+
 .date-input select,
 .date-input button {
   margin: 5px 0;
   padding: 10px;
   width: 200px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: var(--radius);
   background-color: none;
   box-shadow: none;
   margin: 5px auto;
