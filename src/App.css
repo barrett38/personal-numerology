@@ -1,11 +1,6 @@
-* {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .App {
   text-align: center;
+  background-image: url("./components/DateInput/Background-A.JPG");
 }
 
 .App-logo {
