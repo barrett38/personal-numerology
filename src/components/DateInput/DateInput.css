@@ -37,7 +37,7 @@ p {
 .date-input select {
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
   padding: 10px;
 }
 
