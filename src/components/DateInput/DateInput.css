@@ -25,6 +25,9 @@ p {
   background-color: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   margin: auto;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
   /* Flex Settings */
   display: flex;
   flex-direction: column;

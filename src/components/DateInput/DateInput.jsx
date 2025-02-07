@@ -6,7 +6,6 @@ function DateInput() {
     <div>
       {/* still working on */}
       <div className="date-input">
-        <p>We are our numbers.</p>
         <select>
           <option value="">Month</option>
           {Array.from({ length: 12 }, (_, i) => (
@@ -32,6 +31,7 @@ function DateInput() {
           ))}
         </select>
         <button>Submit</button>
+        <p>We are our numbers....</p>
       </div>
     </div>
   );
