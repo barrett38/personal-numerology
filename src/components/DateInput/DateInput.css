@@ -48,7 +48,6 @@ p {
   width: 200px;
   text-align: center;
   border-radius: var(--radius);
-  background-color: none;
   box-shadow: none;
   margin: 5px auto;
   /* Flex Settings */
