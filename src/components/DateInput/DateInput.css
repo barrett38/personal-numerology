@@ -11,13 +11,30 @@
   }
 }
 
+/* Prevent scrolling to white parts */
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .date-input {
   opacity: 0;
   animation: fadeIn 2s forwards;
   background-size: cover;
   background-position: center;
   padding-bottom: 30px;
-  width: 200vw;
+  width: 100vw; /* Adjust width to fit the viewport */
   /* Flex Settings */
   display: flex;
   flex-direction: column;
@@ -30,19 +47,10 @@
 /* Media query for mobile view */
 @media (max-width: 768px) {
   .date-input {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 30px;
-    width: 200vw;
-    /* Flex Settings */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
+    width: 25vw; /* Adjust width to fit the viewport */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 0px; /* Add padding for better spacing */
   }
 }
 
