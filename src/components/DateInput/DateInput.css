@@ -30,10 +30,19 @@
 /* Media query for mobile view */
 @media (max-width: 768px) {
   .date-input {
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    left-padding: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 30px;
+    width: 200vw;
+    /* Flex Settings */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
   }
 }
 
