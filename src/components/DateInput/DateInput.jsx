@@ -5,10 +5,10 @@ function DateInput() {
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
   const [year, setYear] = useState("");
-  const [result1, setResult1] = useState(null);
-  const [result2, setResult2] = useState(null);
+  const [finalResult, setFinalResult] = useState(null);
   const [message, setMessage] = useState("");
 
+  // Function to reduce numbers to a single digit or master number (11, 22, 33)
   const reduceNumber = (num) => {
     while (num > 9 && ![11, 22, 33].includes(num)) {
       num = num
@@ -48,23 +48,16 @@ function DateInput() {
       .reduce((acc, digit) => acc + parseInt(digit), 0);
     const finalResult2 = reduceNumber(allDigitsSum);
 
-    // Check if one of the methods resulted in a master number
+    // Determine which method is accepted
     if ([11, 22, 33].includes(finalResult1)) {
-      setResult1(finalResult1);
-      setResult2(finalResult1 === 11 ? 2 : finalResult1 === 22 ? 4 : 6);
-      setMessage(
-        `Since Method 1 resulted in ${finalResult1}, Method 2 is rejected and set to ${result2}.`
-      );
+      setFinalResult(finalResult1);
+      setMessage(`Method 1 is accepted with result ${finalResult1}.`);
     } else if ([11, 22, 33].includes(finalResult2)) {
-      setResult1(finalResult2 === 11 ? 2 : finalResult2 === 22 ? 4 : 6);
-      setResult2(finalResult2);
-      setMessage(
-        `Since Method 2 resulted in ${finalResult2}, Method 1 is rejected and set to ${result1}.`
-      );
+      setFinalResult(finalResult2);
+      setMessage(`Method 2 is accepted with result ${finalResult2}.`);
     } else {
-      setResult1(finalResult1);
-      setResult2(finalResult2);
-      setMessage("");
+      setFinalResult(finalResult1);
+      setMessage(`Defaulting to Method 1 result: ${finalResult1}.`);
     }
   };
 
@@ -99,11 +92,10 @@ function DateInput() {
 
       <button onClick={handleSubmit}>Submit</button>
 
-      {message && <p>{message}</p>}
-      {result1 !== null && result2 !== null && (
+      {finalResult !== null && (
         <div>
-          <p>Reduction Method 1: {result1}</p>
-          <p>Reduction Method 2: {result2}</p>
+          <p>{message}</p>
+          <p>Final Result: {finalResult}</p>
         </div>
       )}
     </div>
