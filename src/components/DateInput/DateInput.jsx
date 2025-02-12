@@ -6,6 +6,7 @@ function DateInput() {
   const [day, setDay] = useState("");
   const [year, setYear] = useState("");
   const [finalResult, setFinalResult] = useState(null);
+  const [reducedDay, setReducedDay] = useState(null);
   const [message, setMessage] = useState("");
 
   // Function to reduce numbers to a single digit or master number (11, 22, 33)
@@ -31,16 +32,23 @@ function DateInput() {
     const dayNum = parseInt(day);
     const yearNum = parseInt(year);
 
-    // First reduction method
+    // Reduce the month and year
     const reducedMonth = reduceNumber(monthNum);
-    let reducedDay = dayNum;
-    if (![11, 22].includes(dayNum) && dayNum !== 29) {
-      reducedDay = reduceNumber(dayNum);
-    } else if (dayNum === 29) {
-      reducedDay = 11;
-    }
     const reducedYear = reduceNumber(yearNum);
-    const finalResult1 = reduceNumber(reducedMonth + reducedDay + reducedYear);
+
+    // Reduce the day according to rules
+    let reducedDayNum = dayNum;
+    if (![11, 22].includes(dayNum) && dayNum !== 29) {
+      reducedDayNum = reduceNumber(dayNum);
+    } else if (dayNum === 29) {
+      reducedDayNum = 11;
+    }
+    setReducedDay(reducedDayNum); // Store reduced day number
+
+    // First reduction method
+    const finalResult1 = reduceNumber(
+      reducedMonth + reducedDayNum + reducedYear
+    );
 
     // Second reduction method
     const allDigitsSum = `${month}${day}${year}`
@@ -96,6 +104,7 @@ function DateInput() {
         <div>
           <p>{message}</p>
           <p>Final Result: {finalResult}</p>
+          <p>Reduced Day of the Month: {reducedDay}</p>
         </div>
       )}
     </div>
