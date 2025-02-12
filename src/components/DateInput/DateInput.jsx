@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DateInput.css";
+import reduceNumber from "../../util/reduceNumber";
 
 function DateInput() {
   const [month, setMonth] = useState("");
@@ -8,17 +9,6 @@ function DateInput() {
   const [finalResult, setFinalResult] = useState(null);
   const [reducedDay, setReducedDay] = useState(null);
   const [message, setMessage] = useState("");
-
-  // Function to reduce numbers to a single digit or master number (11, 22, 33)
-  const reduceNumber = (num) => {
-    while (num > 9 && ![11, 22, 33].includes(num)) {
-      num = num
-        .toString()
-        .split("")
-        .reduce((acc, digit) => acc + parseInt(digit), 0);
-    }
-    return num;
-  };
 
   // Handle submission
   const handleSubmit = () => {
